@@ -18,29 +18,31 @@ import org.testng.annotations.Test;
  *
  * @author mikiahidjo
  */
-public class ProjetAssignTest {
+public class EmployeTest {
     
-    public ProjetAssignTest() {
+    public EmployeTest() {
     }
-@Test
+
+    
+    @Test
     public  void testCreate()throws Exception {
         
-        ProjetAssign q = new ProjetAssign.Builder("20 mai 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"20 mai 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
+        Employee q = new Employee.Builder("Tchouya","Ngoko").id("2021").build();
+        Assert.assertEquals(q.getId(),"2021");
+        Assert.assertEquals(q.getFirstname(),"Tchouya");
+        Assert.assertEquals(q.getLastname(),"Ngoko");
        
        }
-    @Test
+    
+     @Test
     public  void testUpdate()throws Exception {
         
-        ProjetAssign q = new ProjetAssign.Builder("30 june 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"30 june 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
+       Employee q = new Employee.Builder("Tchouya","Israel").id("2021").build();
+        Assert.assertEquals(q.getId(),"2021");
+        Assert.assertEquals(q.getFirstname(),"Tchouya");
+        Assert.assertEquals(q.getLastname(),"Israel");
+        
        }
-
     @BeforeClass
     public static void setUpClass() throws Exception {
     }

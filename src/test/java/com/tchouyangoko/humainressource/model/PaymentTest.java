@@ -18,28 +18,31 @@ import org.testng.annotations.Test;
  *
  * @author mikiahidjo
  */
-public class ProjetAssignTest {
+public class PaymentTest {
     
-    public ProjetAssignTest() {
+    public PaymentTest() {
     }
-@Test
-    public  void testCreate()throws Exception {
-        
-        ProjetAssign q = new ProjetAssign.Builder("20 mai 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"20 mai 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
-       }
+
     @Test
-    public  void testUpdate()throws Exception {
+    public  void testCreate() throws Exception{
+               
+        Payment q = new Payment.Builder("1 may 2010",5000.0).id("0012").build();
+        Assert.assertEquals(q.getId(),"0012");
+        Assert.assertEquals(q.getDate(),"1 may 2010");
+        Assert.assertEquals(q.getSalary(),5000.0);
         
-        ProjetAssign q = new ProjetAssign.Builder("30 june 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"30 june 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
-       }
+        }
+    
+    @Test
+    public  void testUpdate() throws Exception{
+               
+        Payment q = new Payment.Builder("31 april 2010",6000.0).id("0012").build();
+        Assert.assertEquals(q.getId(),"0012");
+        Assert.assertEquals(q.getDate(),"31 april 2010");
+        Assert.assertEquals(q.getSalary(),6000.0);
+        
+        }
+    
 
     @BeforeClass
     public static void setUpClass() throws Exception {

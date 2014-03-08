@@ -31,6 +31,14 @@ public class JobHistoryTest {
         Assert.assertEquals(q.getEndate(),"End in january 2014");
         
         }
+    @Test
+    public  void testUpdate() throws Exception{
+               
+        JobHistory q = new JobHistory.Builder("End in february 2014").id("start in february 2013").build();
+        Assert.assertEquals(q.getId(),"start in february 2013");
+        Assert.assertEquals(q.getEndate(),"End in february 2014");
+        
+        }
     @BeforeClass
     public static void setUpClass() throws Exception {
     }

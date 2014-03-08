@@ -27,21 +27,20 @@ public class ProjectTest {
     public  void testCreate() throws Exception{
         
         
-        Projet q = new Projet.Builder("william Street","Cape town").id("7460").build();
-        Assert.assertEquals(q.getId(),"7460");
-        Assert.assertEquals(q.getName(),"william Street");
-        Assert.assertEquals(q.getDescription(),"Cape town");
+        Projet q = new Projet.Builder("Airline Reservation","Create a website of an Airline").id(7).build();
+        Assert.assertEquals(q.getId(),7);
+        Assert.assertEquals(q.getName(),"Airline Reservation");
+        Assert.assertEquals(q.getDescription(),"Create a website of an Airline");
         }
     
-     /*@Test
+     @Test
     public  void testUpdate() throws Exception{
         
-        
-        Projet q = new Location.Builder("Monte amiata,william Street","Cape town").id("7460").build();
-        Assert.assertEquals(q.getId(),"7460");
-        Assert.assertEquals(q.getStreet_address(),"Monte amiata,william Street");
-        Assert.assertEquals(q.getCity(),"Cape town");
-        }*/
+       Projet q = new Projet.Builder("Airline Reservation","Create a website of an Airline in java").id(7).build();
+        Assert.assertEquals(q.getId(),7);
+        Assert.assertEquals(q.getName(),"Airline Reservation");
+        Assert.assertEquals(q.getDescription(),"Create a website of an Airline in java");
+        }
     
     @BeforeClass
     public static void setUpClass() throws Exception {

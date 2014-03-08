@@ -18,7 +18,7 @@ public final class Payment {
     private String date;
     private double salary;
     
-    List<Employe>employe;
+    List<Employee>employe;
     
      private Payment(){
 
@@ -37,9 +37,9 @@ public final class Payment {
     private String date;
     private double salary;
     
-    List<Employe>employe;
+    List<Employee>employe;
 
-        public Builder(String date,double Salary) {
+        public Builder(String date,double salary) {
             this.date = date;
             this.salary=salary;
             
@@ -50,7 +50,7 @@ public final class Payment {
             return this;
         }
 
-        public Builder employe(List<Employe> value){
+        public Builder employe(List<Employee> value){
             employe=value;
             return this;
         }
@@ -72,7 +72,7 @@ public final class Payment {
         return salary;
     }
 
-    public List<Employe> getEmploye() {
+    public List<Employee> getEmploye() {
         return employe;
     }
 

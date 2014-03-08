@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author mikiahidjo
  */
-public class DepartementHistory {
+public final class DepartementHistory {
     
     private String id;
     private String name;

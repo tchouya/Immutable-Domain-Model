@@ -18,28 +18,28 @@ import org.testng.annotations.Test;
  *
  * @author mikiahidjo
  */
-public class ProjetAssignTest {
+public class EmailTest {
     
-    public ProjetAssignTest() {
+    public EmailTest() {
     }
-@Test
-    public  void testCreate()throws Exception {
+
+     @Test
+    public  void testCreate() {
         
-        ProjetAssign q = new ProjetAssign.Builder("20 mai 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"20 mai 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
-       }
-    @Test
-    public  void testUpdate()throws Exception {
+        Email q = new Email.Builder("christian").name("mikiahidjo").build();
+        Assert.assertEquals(q.getName(),"mikiahidjo");
+        Assert.assertEquals(q.getPassword(),"christian");
         
-        ProjetAssign q = new ProjetAssign.Builder("30 june 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"30 june 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
-       }
+    }
+    
+      @Test
+    public  void testUpdate() {
+        
+        Email q = new Email.Builder("israel").name("mikiahidjo").build();
+        Assert.assertEquals(q.getName(),"mikiahidjo");
+        Assert.assertEquals(q.getPassword(),"israel");
+        
+    }
 
     @BeforeClass
     public static void setUpClass() throws Exception {

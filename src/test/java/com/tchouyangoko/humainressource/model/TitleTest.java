@@ -18,28 +18,30 @@ import org.testng.annotations.Test;
  *
  * @author mikiahidjo
  */
-public class ProjetAssignTest {
+public class TitleTest {
     
-    public ProjetAssignTest() {
+    public TitleTest() {
     }
-@Test
-    public  void testCreate()throws Exception {
-        
-        ProjetAssign q = new ProjetAssign.Builder("20 mai 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"20 mai 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
-       }
+
     @Test
-    public  void testUpdate()throws Exception {
+    public  void testCreate() throws Exception{
+               
+        Title q = new Title.Builder("history of the company").id("01").build();
+        Assert.assertEquals(q.getId(),"01");
+        Assert.assertEquals(q.getName(),"history of the company");
         
-        ProjetAssign q = new ProjetAssign.Builder("30 june 2013",100000.0).id("201").build();
-        Assert.assertEquals(q.getId(),"201");
-        Assert.assertEquals(q.getDate(),"30 june 2013");
-        Assert.assertEquals(q.getBudget(),100000.0);
-       
-       }
+        }
+    
+    
+    
+     @Test
+    public  void testUpdate() throws Exception{
+        
+         Title q = new Title.Builder("history of the company until our day").id("01").build();
+        Assert.assertEquals(q.getId(),"01");
+        Assert.assertEquals(q.getName(),"history of the company until our day");
+        
+        }
 
     @BeforeClass
     public static void setUpClass() throws Exception {

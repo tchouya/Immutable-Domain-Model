@@ -10,11 +10,9 @@ package com.tchouyangoko.humainressource.model;
  *
  * @author mikiahidjo
  */
-public interface User {
-    
-    public String getId() ;
+public interface Users  {
     
     public String getFirstname();
-    public String getLastname();
+    public String getLastname() ;
     
 }

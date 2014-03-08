@@ -13,8 +13,8 @@ import java.util.Objects;
  *
  * @author mikiahidjo
  */
-public final class Employe implements User {
-    private String id;
+public class Employee implements Users{
+      private String id;
     private String firstname;
     private String lastname;
     
@@ -22,15 +22,15 @@ public final class Employe implements User {
     List<JobHistory>jobhistory;
     List<Office>office;
     List<Qualification>qualification;
-     private Employe(){
+    
+     private Employee(){
 
     }
 
-    private Employe(Builder builder) {
-       id=builder.id;
+    private Employee(Builder builder) {
+        id=builder.id;
         firstname= builder.firstname;
         lastname=builder.lastname;
-        
         passign=builder.passign;
         jobhistory=builder.jobhistory;
         office=builder.office;
@@ -39,7 +39,7 @@ public final class Employe implements User {
     }
 
     public static class Builder{
-         private String id;
+    private String id;
     private String firstname;
     private String lastname;
     
@@ -47,12 +47,11 @@ public final class Employe implements User {
     List<JobHistory>jobhistory;
     List<Office>office;
     List<Qualification>qualification;
-
+    
         public Builder(String firstname,String lastname) {
             this.firstname = firstname;
             this.lastname=lastname;
         }
-
 
         public Builder id(String value){
             id=value;
@@ -63,22 +62,21 @@ public final class Employe implements User {
             passign=value;
             return this;
         }
-        
-        public Builder jobhistory(List<JobHistory> value){
-           jobhistory =value;
+         public Builder jobhistory(List<JobHistory> value){
+            jobhistory=value;
             return this;
         }
-
-         public Builder office(List<Office> value){
+          public Builder office(List<Office> value){
             office=value;
             return this;
         }
-          public Builder qualification(List<Qualification> value){
+         public Builder qualification(List<Qualification> value){
             qualification=value;
             return this;
         }
-        public Employe build(){
-            return new Employe(this);
+
+        public Employee build(){
+            return new Employee(this);
         }
     }
 
@@ -102,8 +100,6 @@ public final class Employe implements User {
         return jobhistory;
     }
 
-    
-   
     public List<Office> getOffice() {
         return office;
     }
@@ -114,7 +110,7 @@ public final class Employe implements User {
 
     @Override
     public int hashCode() {
-        int hash = 3;
+        int hash = 7;
         hash = 67 * hash + Objects.hashCode(this.id);
         return hash;
     }
@@ -127,11 +123,12 @@ public final class Employe implements User {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Employe other = (Employe) obj;
+        final Employee other = (Employee) obj;
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
         return true;
     }
+
     
 }

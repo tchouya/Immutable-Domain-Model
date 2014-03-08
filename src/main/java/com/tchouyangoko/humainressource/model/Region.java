@@ -36,7 +36,7 @@ List<Countries> countries;
       List<Countries> countries;
 
 
-        public Builder(String question) {
+        public Builder(String name) {
             this.name = name;
         }
 

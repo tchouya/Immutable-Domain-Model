@@ -30,7 +30,7 @@ public final class JobHistory {
       private String id;
     private String endate;
 
-        public Builder(String question) {
+        public Builder(String endate) {
             this.endate = endate;
         }
 

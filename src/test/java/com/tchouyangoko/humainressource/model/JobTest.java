@@ -34,7 +34,7 @@ public class JobTest {
         Assert.assertEquals(q.getMax_salary(),8700.0);
         }
     
-    
+    @Test
     public  void testUpdate() throws Exception{
          
         Job q = new Job.Builder("Design",6000.0,1200.0).id("20").build();

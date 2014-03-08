@@ -34,7 +34,7 @@ public final class Title {
          private String name;
          List<JobHistory>jobHistory;
 
-        public Builder(String question) {
+        public Builder(String name) {
             this.name = name;
         }
 

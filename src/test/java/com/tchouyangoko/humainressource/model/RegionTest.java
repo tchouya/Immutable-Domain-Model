@@ -18,32 +18,27 @@ import org.testng.annotations.Test;
  *
  * @author mikiahidjo
  */
-public class Employetest {
+public class RegionTest {
     
-    public Employetest() {
+    public RegionTest() {
     }
 
-      @Test
+     @Test
     public  void testCreate() throws Exception{
+               
+        Region q = new Region.Builder("North").id("12.5").build();
+        Assert.assertEquals(q.getId(),"12.5");
+        Assert.assertEquals(q.getName(),"North");
         
-        
-        Employe q = new Employe.Builder("Tchouya","israel").id("2021").build();
-        Assert.assertEquals(q.getId(),"2021");
-        Assert.assertEquals(q.getFirstname(),"Tchouya");
-        Assert.assertEquals(q.getLastname(),"israel");
         }
     
-    
+     @Test
     public  void testUpdate() throws Exception{
+         Region q = new Region.Builder("North East").id("12.5").build();
+        Assert.assertEquals(q.getId(),"12.5");
+        Assert.assertEquals(q.getName(),"North East");
         
-        
-        Employe q = new Employe.Builder("Tchouya","christian").id("2021").build();
-        Assert.assertEquals(q.getId(),"2021");
-        Assert.assertEquals(q.getFirstname(),"Tchouya");
-        Assert.assertEquals(q.getLastname(),"christian");      
-                
-       }
-
+        }
 
     @BeforeClass
     public static void setUpClass() throws Exception {

@@ -32,7 +32,7 @@ public class DepartementTest {
         
        }
     
-    
+    @Test
     public  void testUpdate() throws Exception{
         
         

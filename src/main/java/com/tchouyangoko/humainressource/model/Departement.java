@@ -17,7 +17,7 @@ public final class Departement {
     private String id;
     private String name;
    
-    List<Employe>employe;
+    List<Employee>employe;
     List<DepartementHistory>dephistory;
     
      private Departement(){
@@ -36,15 +36,11 @@ public final class Departement {
         private String id;
     private String name;
    
-    List<Employe>employe;
+    List<Employee>employe;
     List<DepartementHistory>dephistory;
 
         public Builder(String name) {
             this.name = name;
-        }
-
-        public Builder() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         public Builder id(String value){
@@ -52,7 +48,7 @@ public final class Departement {
             return this;
         }
 
-        public Builder employe(List<Employe> value){
+        public Builder employe(List<Employee> value){
             employe=value;
             return this;
         }
@@ -74,7 +70,7 @@ public final class Departement {
         return name;
     }
 
-    public List<Employe> getEmploye() {
+    public List<Employee> getEmploye() {
         return employe;
     }
 
@@ -84,8 +80,8 @@ public final class Departement {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 37 * hash + Objects.hashCode(this.id);
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -103,5 +99,6 @@ public final class Departement {
         }
         return true;
     }
-    
+
+   
 }
